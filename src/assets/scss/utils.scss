@@ -1,0 +1,607 @@
+@import '../../assets/scss/_mixin';
+
+.w-full {
+  width: 100% !important;
+}
+
+.sm\:w-full {
+  @include media-down(sm) {
+    width: 100% !important;
+  }
+}
+
+.relative {
+  position: relative !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.sm\:overflow-hidden {
+  @include media-down(sm) {
+    overflow: hidden !important;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.no-underline {
+  text-decoration: none !important;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.block {
+  display: block !important;
+}
+
+.inline-block {
+  display: inline-block !important;
+}
+
+.flex {
+  display: flex !important;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.sm\:hidden {
+  @include media-down(sm) {
+    display: none !important;
+  }
+}
+
+.sm\:block {
+  @include media-down(sm) {
+    display: block !important;
+  }
+}
+
+.sm\:block-only {
+  display: none !important;
+  @include media-down(sm) {
+    display: block !important;
+  }
+}
+
+.sm\:inline-block {
+  @include media-down(sm) {
+    display: inline-block !important;
+  }
+}
+
+.sm\:inline-block-only {
+  display: none;
+  @include media-down(sm) {
+    display: inline-block !important;
+  }
+}
+
+.sm\:flex {
+  @include media-down(sm) {
+    display: flex !important;
+  }
+}
+
+.sm\:flex-only {
+  display: none !important;
+  @include media-down(sm) {
+    display: flex !important;
+  }
+}
+
+.underline {
+  text-decoration-line: underline !important;
+}
+
+.h-full {
+  height: 100% !important;
+}
+
+.sm\:h-full {
+  @include media-down(sm) {
+    height: 100% !important;
+  }
+}
+
+// opacity
+.opacity-0 {
+  opacity: 0 !important;
+}
+
+.opacity-0\.5 {
+  opacity: 0.5 !important;
+}
+
+.opacity-1 {
+  opacity: 1 !important;
+}
+
+.pointer-events-none {
+  pointer-events: none !important;
+}
+
+.pointer-events-auto {
+  pointer-events: auto !important;
+}
+
+// order
+.order-1 {
+  order: 1 !important;
+}
+
+.order-2 {
+  order: 2 !important;
+}
+
+.order-3 {
+  order: 3 !important;
+}
+
+.md\:order-1 {
+  @include media-down(md) {
+    order: 1 !important;
+  }
+}
+
+.md\:order-2 {
+  @include media-down(md) {
+    order: 2 !important;
+  }
+}
+
+.md\:order-3 {
+  @include media-down(md) {
+    order: 3 !important;
+  }
+}
+
+.sm\:order-1 {
+  @include media-down(sm) {
+    order: 1 !important;
+  }
+}
+
+.sm\:order-2 {
+  @include media-down(sm) {
+    order: 2 !important;
+  }
+}
+
+.sm\:order-3 {
+  @include media-down(sm) {
+    order: 3 !important;
+  }
+}
+
+.sm\:order-1 {
+  @include media-down(sm) {
+    order: 1 !important;
+  }
+}
+
+.sm\:order-2 {
+  @include media-down(sm) {
+    order: 2 !important;
+  }
+}
+
+.sm\:order-3 {
+  @include media-down(sm) {
+    order: 3 !important;
+  }
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+.z-30 {
+  z-index: 30;
+}
+
+.z-40 {
+  z-index: 40;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.sm\:z-10 {
+  @include media-down(sm) {
+    z-index: 10;
+  }
+}
+
+.z\:-20 {
+  @include media-down(sm) {
+    z-index: 20;
+  }
+}
+
+.z\:-30 {
+  @include media-down(sm) {
+    z-index: 30;
+  }
+}
+
+.z\:-40 {
+  @include media-down(sm) {
+    z-index: 40;
+  }
+}
+
+.z\:-50 {
+  @include media-down(sm) {
+    z-index: 50;
+  }
+}
+
+// margin
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.sm\:mx-auto {
+  @include media-down(sm) {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+}
+
+// font weight
+.font-tin {
+  font-weight: 100 !important;
+}
+
+.font-light {
+  font-weight: 300 !important;
+}
+
+.font-regular {
+  font-weight: 400 !important;
+}
+
+.font-medium {
+  font-weight: 500 !important;
+}
+
+.font-bold {
+  font-weight: 700 !important;
+}
+
+.font-extrabold {
+  font-weight: 800 !important;
+}
+
+.font-black {
+  font-weight: 900 !important;
+}
+
+.sm\:font-tin {
+  @include media-down(sm) {
+    font-weight: 100 !important;
+  }
+}
+
+.sm\:font-light {
+  @include media-down(sm) {
+    font-weight: 300 !important;
+  }
+}
+
+.sm\:font-regular {
+  @include media-down(sm) {
+    font-weight: 400 !important;
+  }
+}
+
+.sm\:font-medium {
+  @include media-down(sm) {
+    font-weight: 500 !important;
+  }
+}
+
+.sm\:font-bold {
+  @include media-down(sm) {
+    font-weight: 700 !important;
+  }
+}
+
+.sm\:font-extrabold {
+  @include media-down(sm) {
+    font-weight: 800 !important;
+  }
+}
+
+.sm\:font-black {
+  @include media-down(sm) {
+    font-weight: 900 !important;
+  }
+}
+
+// font align
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.sm\:text-center {
+  @include media-down(sm) {
+    text-align: center !important;
+  }
+}
+
+.sm\:text-left {
+  @include media-down(sm) {
+    text-align: left !important;
+  }
+}
+
+.sm\:text-right {
+  @include media-down(sm) {
+    text-align: right !important;
+  }
+}
+
+.sm\:text-justify {
+  @include media-down(sm) {
+    text-align: justify !important;
+  }
+}
+
+// line-height
+.leading-loose {
+  line-height: 2 !important;
+}
+
+// flex
+.flex-row {
+  flex-direction: row !important;
+}
+
+.flex-col {
+  flex-direction: column !important;
+}
+
+.items-start {
+  align-items: flex-start !important;
+}
+
+.items-center {
+  align-items: center !important;
+}
+
+.item-stretch {
+  align-items: stretch !important;
+}
+
+.item-end {
+  align-items: flex-end !important;
+}
+
+.justify-start {
+  justify-content: flex-start !important;
+}
+
+.justify-end {
+  justify-content: flex-end !important;
+}
+
+.justify-between {
+  justify-content: space-between !important;
+}
+
+.justify-around {
+  justify-content: space-around !important;
+}
+
+.justify-evenly {
+  justify-content: space-evenly !important;
+}
+
+.sm\:flex {
+  @include media-down(sm) {
+    display: flex !important;
+  }
+}
+
+.sm\:flex-row {
+  @include media-down(sm) {
+    flex-direction: row !important;
+  }
+}
+
+.sm\:flex-col {
+  @include media-down(sm) {
+    flex-direction: column !important;
+  }
+}
+
+.sm\:items-start {
+  @include media-down(sm) {
+    align-items: flex-start !important;
+  }
+}
+
+.sm\:items-center {
+  @include media-down(sm) {
+    align-items: center !important;
+  }
+}
+
+.sm\:item-stretch {
+  @include media-down(sm) {
+    align-items: stretch !important;
+  }
+}
+
+.sm\:item-end {
+  @include media-down(sm) {
+    align-items: flex-end !important;
+  }
+}
+
+.sm\:justify-start {
+  @include media-down(sm) {
+    justify-content: flex-start !important;
+  }
+}
+
+.sm\:justify-end {
+  @include media-down(sm) {
+    justify-content: flex-end !important;
+  }
+}
+
+.sm\:justify-between {
+  @include media-down(sm) {
+    justify-content: space-between !important;
+  }
+}
+
+.sm\:justify-around {
+  @include media-down(sm) {
+    justify-content: space-around !important;
+  }
+}
+
+.sm\:justify-evenly {
+  @include media-down(sm) {
+    justify-content: space-evenly !important;
+  }
+}
+
+.-scale-x-100 {
+  transform: scaleX(-1);
+}
+
+// transition
+.delay-50 {
+  transition-delay: 0.05s !important;
+}
+
+.delay-100 {
+  transition-delay: 0.1s !important;
+}
+
+.delay-150 {
+  transition-delay: 0.15s !important;
+}
+
+.delay-250 {
+  transition-delay: 0.25s !important;
+}
+
+.delay-350 {
+  transition-delay: 0.35s !important;
+}
+
+.delay-450 {
+  transition-delay: 0.45s !important;
+}
+
+.delay-500 {
+  transition-delay: 0.5s !important;
+}
+
+.delay-550 {
+  transition-delay: 0.55s !important;
+}
+
+.delay-650 {
+  transition-delay: 0.65s !important;
+}
+
+.delay-750 {
+  transition-delay: 0.75s !important;
+}
+
+.delay-850 {
+  transition-delay: 0.85s !important;
+}
+
+.delay-950 {
+  transition-delay: 0.95s !important;
+}
+
+.delay-1000 {
+  transition-delay: 1s !important;
+}
+
+.duration-150 {
+  transition-duration: 0.15s !important;
+}
+
+.duration-250 {
+  transition-duration: 0.25s !important;
+}
+
+.duration-500 {
+  transition-duration: 0.5s !important;
+}
+
+.duration-750 {
+  transition-duration: 0.75s !important;
+}
+
+.duration-1000 {
+  transition-duration: 1s !important;
+}
+
+.ease-out-quad {
+  transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+// combine
+.video-obj,
+.image-obj {
+  @include flex();
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+
+.scrollbar-style-y-hidden {
+  overflow: -moz-scrollbars-none;
+  overflow-y: auto !important;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "scss for xxl(max-width-1440)": {
+    "prefix": "xxl",
+    "body": ["@include media-down($xxl) {$1}"],
+    "description": "scss for sm(max-width-1440)"
+  },
+  "scss for sm(max-width-640)": {
+    "prefix": "sm",
+    "body": ["@include media-down($sm) {$1}"],
+    "description": "scss for sm(max-width-640)"
+  },
+  "html-image": {
+    "prefix": "picture-img",
+    "body": [
+      "<picture class=\"image-obj\">",
+      "  <source media=\"(max-width: 640px)\" :srcset=\"$1\" />",
+      "  <img :src=\"$2\" :alt=\"$3\" class=\"w-full\" />",
+      "</picture>"
+    ],
+    "description": "html-image"
+  },
+  "quickly size": {
+    "prefix": "size",
+    "body": ["@include size($1, $2);"],
+    "description": "quickly size"
+  },
+  "quickly image inner": {
+    "prefix": "inner",
+    "body": ["@include image-inner($1);"],
+    "description": "generate inner for images by padding-bottom quickly"
+  },
+  "px to vw for desktop": {
+    "prefix": "pv",
+    "body": ["px2vw($1)"],
+    "description": "px to vw for desktop"
+  },
+  "px to vw for desktop in limit": {
+    "prefix": "pvl",
+    "body": ["px2vw-lock($1);"],
+    "description": "px to vw for desktop in limit"
+  },
+  "px to vw for pad": {
+    "prefix": "pvd",
+    "body": ["px2vw($1, $$p-size)"],
+    "description": "px to vw for pad"
+  },
+  "px to vw for mobile": {
+    "prefix": "pvm",
+    "body": ["px2vw($1, $$m-size)"],
+    "description": "px to vw for mobile"
+  },
+  "clamp desktop": {
+    "prefix": "cld",
+    "body": ["clamp(1px, px2vw($1), $1px)"],
+    "description": "clamp for desktop"
+  },
+  "quickly create font template of configure for desktop": {
+    "prefix": "f",
+    "body": [
+      "font-size: px2vw-lock($1);",
+      "line-height: px2vw-lock($2);",
+      "letter-spacing: px2vw-lock($3);"
+    ],
+    "description": "quickly create font template of configure for desktop"
+  },
+  "quickly create font template of configure for mobile": {
+    "prefix": "fm",
+    "body": [
+      " font-size: px2vw($1, $$m-size);",
+      "line-height: px2vw($2, $$m-size);",
+      "letter-spacing: px2vw($3, $$m-size);"
+    ],
+    "description": "quickly create font template of configure for mobile"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // 如果使用 prettier 來排版時，須加上這段
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // "editor.codeActionsOnSave": {
+  //   // for stylelint (need to install "stylelint" "stylelint-config-standard" "stylelint-config-sass-guidelines"  in dev environment)
+  //   // completed command: $ npm install --save-dev stylelint stylelint-config-standard stylelint-config-sass-guidelines
+  //   "source.fixAll.stylelint": true // 如果使用 stylelint 來做 css 排版時，須加上這段
+  // },
+  // "cSpell.words": ["gsap", "Nuxt"]
+}

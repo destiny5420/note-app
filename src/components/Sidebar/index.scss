@@ -1,0 +1,44 @@
+.c-sidebar {
+  .c-header {
+    .c-title {
+      margin: 0;
+      font-size: 24px;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .c-new-btn {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      border: 0px solid transparent;
+      background-color: rgb(50, 52, 59);
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+      color: #fff;
+      transition: 0.25s;
+
+      &:hover {
+        background-color: lighten($color: rgb(50, 52, 59), $amount: 20);
+      }
+    }
+  }
+  .c-list {
+    .c-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 3px;
+      padding: 20px 0;
+      transition: background-color 0.25s;
+      .c-text-snippet {
+        margin: 0;
+      }
+
+      &.is-selected {
+        background-color: rgba(37, 38, 39, 0.418);
+      }
+    }
+  }
+}
