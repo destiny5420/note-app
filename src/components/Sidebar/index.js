@@ -32,15 +32,8 @@ const SideBar = (props) => {
           <div className="c-icon">
             <div className="o-image relative">
               <picture className="image-obj">
-                <source
-                  media="(max-width: 640px)"
-                  srcSet={require('../../assets/images/pencil-01.png')}
-                />
-                <img
-                  src={require('../../assets/images/pencil-01.png')}
-                  alt="icon"
-                  className="w-full"
-                />
+                <source media="(max-width: 640px)" srcSet={require('images/pencil-01.png')} />
+                <img src={require('images/pencil-01.png')} alt="icon" className="w-full" />
               </picture>
             </div>
           </div>
