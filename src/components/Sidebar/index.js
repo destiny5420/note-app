@@ -5,6 +5,8 @@ import './index.scss'
 const SideBar = (props) => {
   const { notes, currentNote, setCurrentNoteId, newNote } = props
 
+  const snippetText = currentNote.body.split('\n')[0]
+
   const noteElements = notes.map((note, index) => {
     return (
       <div key={note.id}>
@@ -13,7 +15,7 @@ const SideBar = (props) => {
           onClick={() => {
             setCurrentNoteId(note.id)
           }}>
-          <h4 className="c-text-snippet">Note {index + 1}</h4>
+          <h4 className="c-text-snippet">{snippetText}</h4>
         </div>
       </div>
     )
