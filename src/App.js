@@ -52,28 +52,20 @@ function App() {
       }
 
       return newArray
-
-      // if (noteIsFirst(currentNoteId)) {
-      //   console.log(`way 1`)
-      //   oldNotes.map((oldNote) => {
-      //     return oldNote.id === currentNoteId ? { ...oldNote, body: text } : oldNote
-      //   })
-      // } else {
-      //   console.log(`way 2`)
-      //   const newArray = []
-
-      //   for (let i = 0; i < oldNotes.length; i++) {
-      //     const oldNote = oldNotes[i]
-      //     if (oldNote.id === currentNoteId) {
-      //       newArray.unshift({ ...oldNote, body: text })
-      //     } else {
-      //       newArray.push(oldNote)
-      //     }
-      //   }
-
-      //   return newArray
-      // }
     })
+  }
+
+  function deleteNote(event, noteId) {
+    // console.log(`delete note / noteID: `, noteId)
+    event.stopPropagation()
+
+    // 1. way 01
+    // setNotes((oldNotes) => oldNotes.filter((note) => note.id !== noteId))
+
+    // 2. way 02
+    // const newAay = notes
+    const newAry = notes.filter((note) => note.id !== noteId)
+    setNotes(newAry)
   }
 
   function findCurrentNote() {
@@ -100,6 +92,7 @@ function App() {
             currentNote={findCurrentNote()}
             setCurrentNoteId={setCurrentNoteId}
             newNote={createNewNote}
+            deleteNote={deleteNote}
           />
           {currentNoteId && notes.length > 0 && (
             <Editor currentNote={findCurrentNote()} updateNote={updateNote} />
