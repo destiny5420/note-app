@@ -1,10 +1,31 @@
+@import '../../assets/scss/mixin';
+
 .c-sidebar {
   .c-header {
     .c-title {
       margin: 0;
-      font-size: 24px;
-      text-align: center;
       padding: 20px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .c-icon {
+        .o-image {
+          @include image-inner(1, 1);
+          width: 30px;
+        }
+      }
+
+      .o-text {
+        font-size: 24px;
+        line-height: 1;
+        text-align: center;
+        display: block;
+      }
+
+      > :not(:last-child) {
+        margin-right: 5px;
+      }
     }
 
     .c-new-btn {
@@ -30,7 +51,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 20px 10px;
+      padding: 20px 25px 20px 10px;
       transition: background-color 0.25s;
 
       .c-text-snippet {
@@ -43,6 +64,9 @@
         top: 50%;
         right: 0;
         transform: translateY(-50%);
+        background-color: transparent;
+        border: 0 solid transparent;
+        padding: 0;
       }
 
       &.is-selected {
