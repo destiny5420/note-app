@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import './App.scss'
 
+// Plugin
+import Split from 'react-split'
+import { nanoid } from 'nanoid'
+
 // Component
 import Editor from 'components/Editor/index'
 import Sidebar from 'components/Sidebar/index'
-import Split from 'react-split'
-import { nanoid } from 'nanoid'
+import Button from '@mui/material/Button'
 
 function App() {
   const [notes, setNotes] = useState(() => JSON.parse(localStorage.getItem('notes')) || [])
@@ -100,10 +103,17 @@ function App() {
         </Split>
       ) : (
         <div className="c-no-notes">
-          <h1 className="c-title">You have no notes</h1>
-          <button className="c-create-btn pointer" onClick={createNewNote}>
+          <h1 className="c-title">✏️ This is a note app built with react</h1>
+          <h2 className="c-subTitle">
+            maybe you can use it to record your life or do something your want
+          </h2>
+          <Button
+            className="c-create-btn"
+            variant="contained"
+            color="success"
+            onClick={createNewNote}>
             Create one now
-          </button>
+          </Button>
         </div>
       )}
     </main>

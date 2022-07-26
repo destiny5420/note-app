@@ -11,20 +11,18 @@
   flex-direction: column;
 
   .c-title {
-    margin-bottom: 20px;
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .c-subTitle {
+    margin: 5px 0;
+    font-weight: 300;
+    font-size: 14px;
   }
 
   .c-create-btn {
-    border-radius: 5px;
-    border: 0px solid transparent;
-    background-color: rgb(31, 37, 50);
-    padding: 20px 15px;
-    color: #fff;
-    transition: 0.25s background-color;
-
-    &:hover {
-      background-color: lighten($color: rgb(31, 37, 50), $amount: 10);
-    }
+    margin-top: 10px;
   }
 }
 
