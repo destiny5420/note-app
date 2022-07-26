@@ -26,12 +26,13 @@
   }
   .c-list {
     .c-title {
+      min-height: 22.5px;
       display: flex;
       justify-content: center;
       align-items: center;
-      border-radius: 3px;
-      padding: 20px 0;
+      padding: 20px 10px;
       transition: background-color 0.25s;
+
       .c-text-snippet {
         margin: 0;
       }
