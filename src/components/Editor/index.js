@@ -23,9 +23,7 @@ const Editor = (props) => {
         onChange={updateNote}
         selectedTab={selectedTab}
         onTabChange={setSelectTab}
-        generateMarkdownPreview={(markdown) => {
-          Promise.resolve(converter.makeHtml(markdown))
-        }}
+        generateMarkdownPreview={(markdown) => Promise.resolve(converter.makeHtml(markdown))}
         minEditorHeight={80}
         heightUnits="vh"
       />
