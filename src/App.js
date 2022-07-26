@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './App.scss'
 
 // Component
@@ -8,10 +8,12 @@ import Split from 'react-split'
 import { nanoid } from 'nanoid'
 
 function App() {
-  const [notes, setNotes] = useState([])
+  const [notes, setNotes] = useState(() => JSON.parse(localStorage.getItem('notes')) || [])
   const [currentNoteId, setCurrentNoteId] = useState((notes[0] && notes[0].id) || '')
 
-  console.warn(`currentNoteId: `, currentNoteId)
+  useEffect(() => {
+    localStorage.setItem('notes', JSON.stringify(notes))
+  }, [notes])
 
   function createNewNote() {
     const newNote = {
@@ -21,16 +23,49 @@ function App() {
 
     setNotes((prev) => [newNote, ...prev])
     setCurrentNoteId(newNote.id)
+  }
 
-    console.log(`create new note`)
+  function noteIsFirst(id) {
+    return notes[0].id === id
   }
 
   function updateNote(text) {
-    setNotes((oldNotes) =>
-      oldNotes.map((oldNote) => {
-        return oldNote.id === currentNoteId ? { ...oldNote, body: text } : oldNote
-      })
-    )
+    setNotes((oldNotes) => {
+      let newArray = null
+
+      if (noteIsFirst(currentNoteId)) {
+        newArray = oldNotes.map((oldNote) => {
+          return oldNote.id === currentNoteId ? { ...oldNote, body: text } : oldNote
+        })
+
+        return newArray
+      }
+
+      newArray = []
+      for (let i = 0; i < oldNotes.length; i++) {
+        const oldNote = oldNotes[i]
+        if (oldNote.id === currentNoteId) {
+          newArray.unshift({ ...oldNote, body: text })
+        } else {
+          newArray.push(oldNote)
+        }
+      }
+
+      return newArray
+    })
+  }
+
+  function deleteNote(event, noteId) {
+    // console.log(`delete note / noteID: `, noteId)
+    event.stopPropagation()
+
+    // 1. way 01
+    // setNotes((oldNotes) => oldNotes.filter((note) => note.id !== noteId))
+
+    // 2. way 02
+    // const newAay = notes
+    const newAry = notes.filter((note) => note.id !== noteId)
+    setNotes(newAry)
   }
 
   function findCurrentNote() {
@@ -57,6 +92,7 @@ function App() {
             currentNote={findCurrentNote()}
             setCurrentNoteId={setCurrentNoteId}
             newNote={createNewNote}
+            deleteNote={deleteNote}
           />
           {currentNoteId && notes.length > 0 && (
             <Editor currentNote={findCurrentNote()} updateNote={updateNote} />
