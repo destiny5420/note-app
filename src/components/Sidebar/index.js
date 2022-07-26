@@ -5,18 +5,17 @@ import './index.scss'
 const SideBar = (props) => {
   const { notes, currentNote, setCurrentNoteId, newNote } = props
 
-  const snippetText = currentNote.body.split('\n')[0]
-
   const noteElements = notes.map((note, index) => {
+    const snippetText = note.body.split('\n')[0]
+
     return (
-      <div key={note.id}>
-        <div
-          className={`c-title pointer ${note.id === currentNote.id ? 'is-selected' : ''}`}
-          onClick={() => {
-            setCurrentNoteId(note.id)
-          }}>
-          <h4 className="c-text-snippet">{snippetText}</h4>
-        </div>
+      <div
+        key={note.id}
+        className={`c-title pointer ${note.id === currentNote.id ? 'is-selected' : ''}`}
+        onClick={() => {
+          setCurrentNoteId(note.id)
+        }}>
+        <h4 className="c-text-snippet">{snippetText}</h4>
       </div>
     )
   })

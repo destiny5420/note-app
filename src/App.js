@@ -23,16 +23,57 @@ function App() {
 
     setNotes((prev) => [newNote, ...prev])
     setCurrentNoteId(newNote.id)
+  }
 
-    console.log(`create new note`)
+  function noteIsFirst(id) {
+    return notes[0].id === id
   }
 
   function updateNote(text) {
-    setNotes((oldNotes) =>
-      oldNotes.map((oldNote) => {
-        return oldNote.id === currentNoteId ? { ...oldNote, body: text } : oldNote
-      })
-    )
+    setNotes((oldNotes) => {
+      let newArray = null
+
+      if (noteIsFirst(currentNoteId)) {
+        newArray = oldNotes.map((oldNote) => {
+          return oldNote.id === currentNoteId ? { ...oldNote, body: text } : oldNote
+        })
+
+        return newArray
+      }
+
+      newArray = []
+      for (let i = 0; i < oldNotes.length; i++) {
+        const oldNote = oldNotes[i]
+        if (oldNote.id === currentNoteId) {
+          newArray.unshift({ ...oldNote, body: text })
+        } else {
+          newArray.push(oldNote)
+        }
+      }
+
+      return newArray
+
+      // if (noteIsFirst(currentNoteId)) {
+      //   console.log(`way 1`)
+      //   oldNotes.map((oldNote) => {
+      //     return oldNote.id === currentNoteId ? { ...oldNote, body: text } : oldNote
+      //   })
+      // } else {
+      //   console.log(`way 2`)
+      //   const newArray = []
+
+      //   for (let i = 0; i < oldNotes.length; i++) {
+      //     const oldNote = oldNotes[i]
+      //     if (oldNote.id === currentNoteId) {
+      //       newArray.unshift({ ...oldNote, body: text })
+      //     } else {
+      //       newArray.push(oldNote)
+      //     }
+      //   }
+
+      //   return newArray
+      // }
+    })
   }
 
   function findCurrentNote() {
