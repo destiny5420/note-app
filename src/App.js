@@ -21,7 +21,7 @@ function App() {
   function createNewNote() {
     const newNote = {
       id: nanoid(),
-      body: `# Type your makedown note's title here`
+      body: `# Type your markdown note's title here`
     }
 
     setNotes((prev) => [newNote, ...prev])
@@ -103,9 +103,9 @@ function App() {
         </Split>
       ) : (
         <div className="c-no-notes">
-          <h1 className="c-title">✏️ This is a note app built with react</h1>
+          <h1 className="c-title">✏️ This is a note app built with React</h1>
           <h2 className="c-subTitle">
-            maybe you can use it to record your life or do something your want
+            maybe you can use it to record your life or do something you want
           </h2>
           <Button
             className="c-create-btn"
